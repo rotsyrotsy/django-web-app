@@ -1,0 +1,8 @@
+{% extends 'listings/base.html' %}
+{% block content%}
+        <h2>{{song.title}}</h2>
+        <ul>
+            <li>Groupe : {{song.band.name}}</li>
+        </ul>
+       <p><a href="{% url 'song-list' %}">Retour</a></p>
+{% endblock %}

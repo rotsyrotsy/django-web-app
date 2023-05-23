@@ -1,0 +1,12 @@
+{% extends 'listings/base.html' %}
+{% block content%}
+        <h1>Chansons</h1>
+        <p>
+            <a href="{% url 'song-create' %}">Créer une nouvelle chanson</a>
+        </p>
+        <ul>
+            {% for song in songs %}
+                <li><a href="{% url 'song-detail' song.id %}">{{song.title}}</a></li>
+            {% endfor %}
+        </ul>
+{% endblock %}

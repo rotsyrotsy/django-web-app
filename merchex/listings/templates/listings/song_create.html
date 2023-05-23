@@ -1,0 +1,9 @@
+{% extends 'listings/base.html' %}
+{% block content%}
+    <h2>Créer une nouvelle chanson</h2>
+    <form method="post" >
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Enregistrer">
+    </form>
+{% endblock %}
